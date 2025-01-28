@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Plugin",
+            "type": "shell",
+            "command": "yarn build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Prepare Debug",
+            "type": "shell",
+            "command": "mkdir -p /app/@anddev-oss/verdaccio-auth-az-tables && ln -sf /app/lib /app/@anddev-oss/verdaccio-auth-az-tables/lib && ln -sf /app/package.json /app/@anddev-oss/verdaccio-auth-az-tables/package.json",
+            "problemMatcher": [],
+            "dependsOn": "Build Plugin"
+        }
+    ]
+}

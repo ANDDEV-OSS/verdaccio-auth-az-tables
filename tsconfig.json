@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "declaration": true,
+    "allowJs": false,
+    "noImplicitAny": false,
+    "strict": true,
+    "outDir": "./lib",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,               // Generate source maps
+    "inlineSources": true,           // Include original source in the source map
+    "inlineSourceMap": false,        // Avoid inline source maps for external debugging
+    "typeRoots": [
+      "./node_modules/@verdaccio/types/lib/verdaccio",
+      "./node_modules/@types"
+    ]
+  },
+  "include": [
+    "src/*.ts",
+    "types/*.ts"
+  ]
+}

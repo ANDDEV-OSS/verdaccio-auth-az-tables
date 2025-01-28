@@ -1,0 +1,53 @@
+{
+  "name": "@anddev-oss/verdaccio-auth-az-tables",
+  "version": "0.0.6",
+  "description": "Auth plugin for Verdaccio that utilises Azure Storage Account Tables",
+  "license": "MIT",
+  "author": {
+    "name": "&DEV Limited",
+    "email": "opensource@and.dev"
+  },
+  "homepage": "https://github.com/ANDDEV-OSS/verdaccio-auth-az-tables",
+  "repository": {
+    "url": "git+https://github.com/ANDDEV-OSS/verdaccio-auth-az-tables.git",
+    "type": "git"
+  },
+  "keywords": [
+    "verdaccio",
+    "plugin",
+    "auth",
+    "azure",
+    "blob",
+    "tables",
+    "verdaccio-plugin",
+    "verdaccio-auth"
+  ],
+  "main": "lib/src/index.js",
+  "types": "lib/src/index.d.ts",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@azure/data-tables": "^13.3.0",
+    "@azure/identity": "^4.6.0",
+    "@azure/storage-blob": "^12.24.0",
+    "@verdaccio/commons-api": "^10.2.0",
+    "argon2": "^0.41.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.71",
+    "@verdaccio/types": "^10.8.0",
+    "eslint": "^9.8.0",
+    "typescript": "^5.5.4",
+    "verdaccio": "^6.0.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "debug": "DEBUG=verdaccio* ./node_modules/.bin/verdaccio --config /app/verdaccio-config.yaml",
+    "start": "verdaccio -c /app/verdaccio-config.yaml"
+  },
+  "files": [
+    "lib/"
+  ],
+  "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728"
+}
